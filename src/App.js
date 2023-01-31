@@ -14,8 +14,9 @@ class App extends React.Component {
     }
   }
   onSearchChange = (event) => {
-    const myFilter = this.robots.filter(robot => robot.name.toLowerCase().includes(event.target.value.toLowerCase()));
+    const myFilter = this.state.robots.filter(robot => robot.name.toLowerCase().includes(event.target.value.toLowerCase()));
     this.setState({ fileredRobots: myFilter });
+    console.log(this.state.fileredRobots);
   }
   render () {
     return (
